@@ -1,0 +1,12 @@
+# Use an official Python runtime as a parent image
+FROM python:3.9-slim
+
+# Set the working directory inside the container
+WORKDIR /app
+
+# Copy the download_model.py script
+COPY download_model.py /app
+
+# Install all libraries from requirements.txt
+COPY requirements.txt /app/
+RUN pip install --no-cache-dir -r requirements.txt
