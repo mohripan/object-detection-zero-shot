@@ -4,3 +4,6 @@ transformers
 matplotlib
 torch
 torchvision
+streamlit
+replicate
+python-dotenv

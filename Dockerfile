@@ -4,5 +4,8 @@ FROM zero-shot-object-detection-base-with-model
 # Copy the local project files into the container
 COPY . /app
 
-# Set the command to run your application
-CMD ["python", "./app.py"]
+# Expose the streamlit port
+EXPOSE 8501
+
+# Set the command to run Streamlit
+CMD ["streamlit", "run", "./app.py"]

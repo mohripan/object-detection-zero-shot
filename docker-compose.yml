@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  zero-shot-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: zero-shot-object-detection-app
+    ports:
+      - "8501:8501"
+    env_file:
+      - .env
