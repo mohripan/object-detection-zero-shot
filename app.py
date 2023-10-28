@@ -193,3 +193,9 @@ else:  # One-Shot Object Detection
 
             st.header("Detected Objects in Target Image")
             st.image(target_image, use_column_width=True)
+            
+# Footer
+st.markdown("""
+--- 
+Created by Mohammad Ripan Saiful Mansur
+""")
