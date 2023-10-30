@@ -5,7 +5,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: zero-shot-object-detection-app
+    image: mohripan/zero-shot-object-detection-app
     ports:
       - "8501:8501"
     env_file:

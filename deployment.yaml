@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: zero-shot-app-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: zero-shot-app
+  template:
+    metadata:
+      labels:
+        app: zero-shot-app
+    spec:
+      containers:
+      - name: zero-shot-app
+        image: mohripan/zero-shot-object-detection-app:latest
+        ports:
+        - containerPort: 8501
+        envFrom:
+        - secretRef:
+            name: zero-shot-secrets
